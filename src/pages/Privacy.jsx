@@ -114,19 +114,19 @@ We aim to respond to all inquiries within 48 hours.`
   ];
 
   return (
-    <div className="min-h-screen bg-secondary-50 py-16">
+    <div className="min-h-screen bg-secondary-50 dark:bg-secondary-900 py-16">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl font-bold text-center mb-4">Privacy Policy</h1>
-          <p className="text-secondary-600 text-center mb-12">
+          <h1 className="text-4xl font-bold text-center mb-4 dark:text-white">Privacy Policy</h1>
+          <p className="text-secondary-600 dark:text-secondary-400 text-center mb-12">
             Last updated: March 15, 2024
           </p>
 
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <div className="bg-white dark:bg-secondary-800 rounded-lg shadow-md p-8">
             <div className="space-y-8">
               {sections.map((section, index) => (
                 <motion.div
@@ -136,8 +136,8 @@ We aim to respond to all inquiries within 48 hours.`
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
-                  <div className="text-secondary-600 whitespace-pre-line">
+                  <h2 className="text-2xl font-semibold mb-4 dark:text-white">{section.title}</h2>
+                  <div className="text-secondary-600 dark:text-secondary-400 whitespace-pre-line">
                     {section.content}
                   </div>
                 </motion.div>

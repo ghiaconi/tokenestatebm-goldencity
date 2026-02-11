@@ -49,7 +49,7 @@ function BlogPost() {
   };
 
   return (
-    <div className="min-h-screen bg-secondary-50">
+    <div className="min-h-screen bg-secondary-50 dark:bg-secondary-900">
       {/* Hero Section */}
       <div className="relative h-[400px]">
         <img
@@ -65,11 +65,11 @@ function BlogPost() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl text-white"
             >
-              <Link to="/blog" className="inline-flex items-center text-white mb-6 hover:text-primary-300">
+              <Link to="/blog" className="inline-flex items-center text-white mb-6 hover:text-primary-300"> 
                 <FiArrowLeft className="mr-2" />
                 Back to Blog
               </Link>
-              <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+              <h1 className="text-4xl font-bold mb-4 dark:text-white">{post.title}</h1>
               <div className="flex items-center text-secondary-200 space-x-6">
                 <div className="flex items-center">
                   <FiUser className="mr-2" />
@@ -99,9 +99,9 @@ function BlogPost() {
             transition={{ delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <div className="bg-white rounded-lg shadow-md p-8">
+            <div className="bg-white dark:bg-secondary-800 rounded-lg shadow-md p-8">
               <div 
-                className="prose prose-lg max-w-none"
+                className="prose dark:prose-invert prose-lg max-w-none dark:text-secondary-200"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             </div>
@@ -115,27 +115,27 @@ function BlogPost() {
           >
             <div className="space-y-6">
               {/* Share */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <div className="bg-white dark:bg-secondary-800 rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold mb-4 flex items-center dark:text-white">
                   <FiShare2 className="mr-2" />
                   Share this article
                 </h3>
                 <div className="flex space-x-4">
-                  <button className="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200">
+                  <button className="p-2 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
                     <FaFacebook size={20} />
                   </button>
-                  <button className="p-2 rounded-full bg-sky-100 text-sky-500 hover:bg-sky-200">
+                  <button className="p-2 rounded-full bg-sky-100 dark:bg-sky-900 text-sky-500 dark:text-sky-300 hover:bg-sky-200 dark:hover:bg-sky-800">
                     <FaTwitter size={20} />
                   </button>
-                  <button className="p-2 rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200">
+                  <button className="p-2 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
                     <FaLinkedin size={20} />
                   </button>
                 </div>
               </div>
 
               {/* Tags */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <div className="bg-white dark:bg-secondary-800 rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold mb-4 flex items-center dark:text-white">
                   <FiTag className="mr-2" />
                   Tags
                 </h3>
@@ -143,7 +143,7 @@ function BlogPost() {
                   {post.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-secondary-100 text-secondary-600 rounded-full text-sm"
+                      className="px-3 py-1 bg-secondary-100 dark:bg-secondary-700 text-secondary-600 dark:text-secondary-300 rounded-full text-sm"
                     >
                       {tag}
                     </span>
