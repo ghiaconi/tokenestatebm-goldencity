@@ -230,16 +230,16 @@ function Home() {
         <div className="relative container text-center text-white space-y-8">
           <motion.h1 
             className="text-5xl font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
           >
             Invest and Trade in Real Estate with Cryptocurrency
           </motion.h1>
           <motion.p 
             className="text-xl max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             Own fractional shares of premium properties through NFTs. Start investing with as little as $10.
@@ -258,10 +258,10 @@ function Home() {
             <motion.div
               key={index}
               className="relative"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
+              transition={{ delay: index * 0.15 }}
             >
               <div className="bg-white dark:bg-secondary-800 p-6 rounded-lg shadow-md text-center">
                 <div className="bg-primary-50 dark:bg-primary-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -289,10 +289,10 @@ function Home() {
               <motion.div
                 key={index}
                 className="bg-secondary-800 p-6 rounded-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={{ delay: index * 0.15 }}
               >
                 <div className="bg-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <item.icon className="text-2xl text-white" />
@@ -317,10 +317,10 @@ function Home() {
             <motion.div
               key={property.id}
               className="card group"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, rotate: -2, scale: 0.95 }}
+              whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
+              transition={{ delay: index * 0.15 }}
             >
               <div className="relative h-48">
                 <img
@@ -389,10 +389,10 @@ function Home() {
               <motion.div
                 key={index}
                 className="bg-white dark:bg-secondary-800 p-6 rounded-lg shadow-md text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
+                transition={{ delay: index * 0.15 }}
               >
                 <advantage.icon className="text-4xl text-primary-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2 dark:text-white">{advantage.title}</h3>
@@ -447,10 +447,10 @@ function Home() {
           {blogPosts.map((post, index) => (
             <motion.article
               key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.92 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.12 }}
               className="bg-white dark:bg-secondary-700 rounded-lg shadow-md overflow-hidden"
             >
               <Link to={`/blog/${post.slug}`}>
